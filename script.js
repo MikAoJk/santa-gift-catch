@@ -110,6 +110,7 @@ function startGame() {
     startTs: performance.now(),
     difficultyRamp: 0
   });
+  finalTitle.textContent = 'Catch the Gifts!'; // NEW: ensures non-Game Over title during play
   updateHUD();
   overlay.hidden = true;
   clearItems();
