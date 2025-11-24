@@ -246,3 +246,8 @@ h1 {
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition: none !important; }
 }
+
+/* Ensure hidden attribute always hides elements */
+[hidden] {
+  display: none !important;
+}
