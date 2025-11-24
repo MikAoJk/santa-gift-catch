@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Santa Gift Catch 🎄</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <h1>Santa Gift Catch 🎄</h1>
+    <div class="hud">
+      <div class="hud-block">
+        <span>Score:</span> <strong id="score">0</strong>
+      </div>
+      <div class="hud-block">
+        <span>Time:</span> <strong id="time">60</strong>s
+      </div>
+      <div class="hud-block">
+        <span>Lives:</span> <strong id="lives">3</strong>
+      </div>
+      <div class="hud-block">
+        <span>High:</span> <strong id="highScore">0</strong>
+      </div>
+      <button id="pauseBtn" class="btn small" aria-pressed="false">⏸ Pause</button>
+      <button id="restartBtn" class="btn small">🔄 Restart</button>
+    </div>
+  </header>
+
+  <main id="gameWrap">
+    <div id="game" aria-label="Santa Gift Catch Game Area">
+      <div id="santa" role="figure" aria-label="Santa player"></div>
+    </div>
+
+    <div id="overlay" hidden>
+      <div class="modal" role="dialog" aria-modal="true">
+        <h2 id="finalTitle">Game Over</h2>
+        <p id="finalScoreText"></p>
+        <button id="playAgain" class="btn primary">Play Again</button>
+      </div>
+    </div>
+
+    <div class="controls" aria-label="Touch controls">
+      <button id="leftBtn" class="circle-btn" aria-label="Move left">◀</button>
+      <button id="rightBtn" class="circle-btn" aria-label="Move right">▶</button>
+    </div>
+  </main>
+
+  <div id="ariaLive" class="visually-hidden" aria-live="polite"></div>
+
+  <footer class="footer">
+    <p>Made with ❤️ & 🎁 — Merry Christmas!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
